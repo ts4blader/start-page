@@ -25,6 +25,11 @@
      &:hover {
          text-decoration: 2px underline;
      }
+
+     &:focus {
+         text-decoration: 2px underline;
+         outline: none;
+     }
  }
 
  input {
@@ -156,7 +161,8 @@
                  transition: all ease .2s;
              }
 
-             &:hover {
+             &:hover,
+             &:focus {
                  color: $sub;
 
                  &::before {

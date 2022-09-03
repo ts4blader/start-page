@@ -22,6 +22,12 @@ a:hover {
           text-decoration: 2px underline;
 }
 
+a:focus {
+  -webkit-text-decoration: 2px underline;
+          text-decoration: 2px underline;
+  outline: none;
+}
+
 input {
   font-family: 'JetBrains Mono', monospace;
 }
@@ -175,11 +181,11 @@ body {
   transition: all ease .2s;
 }
 
-.panel_bookmark-item:hover {
+.panel_bookmark-item:hover, .panel_bookmark-item:focus {
   color: #EBC5A0;
 }
 
-.panel_bookmark-item:hover::before {
+.panel_bookmark-item:hover::before, .panel_bookmark-item:focus::before {
   right: 105%;
   opacity: 1;
 }
