@@ -1,0 +1,170 @@
+ @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap');
+
+ $main: #92a8bd;
+ $sub: #EBC5A0;
+ $bg: #2d3436;
+ $white: #fff;
+ $gray: #636E72;
+
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ html {
+     font-family: 'JetBrains Mono', monospace;
+     font-size: 62.5%;
+ }
+
+ a {
+     color: $white;
+     text-decoration: none;
+
+     &:hover {
+         text-decoration: 2px underline;
+     }
+ }
+
+ input {
+     font-family: 'JetBrains Mono', monospace;
+
+     &:focus {
+         outline: none;
+     }
+ }
+
+ button {
+     appearance: none;
+     background-color: transparent;
+     border-width: 0;
+     font-family: inherit;
+     font-size: inherit;
+     font-style: inherit;
+     font-weight: inherit;
+     line-height: 0;
+     padding: 0;
+
+ }
+
+ body {
+     width: 100vw;
+     min-height: 100vh;
+     color: $white;
+     font-size: 2.4rem;
+     font-weight: normal;
+     background-color: $bg;
+     display: grid;
+     place-items: center;
+ }
+
+ .hint {
+     position: fixed;
+     width: 3rem;
+     aspect-ratio: 1 / 1;
+     cursor: pointer;
+     top: 5rem;
+     right: 5rem;
+ }
+
+ .container {
+     max-width: 120rem;
+     padding: 4rem 5rem;
+     border: 0.5rem solid $main;
+     border-radius: 1rem;
+     box-shadow: 1rem 1rem 0px $main;
+
+     display: flex;
+     gap: 5rem;
+ }
+
+ .profile {
+
+     text-align: center;
+
+     &_avatar {
+         border-radius: 1rem;
+         overflow: hidden;
+     }
+
+     &_name {
+         font-size: 4rem;
+         font-weight: 700;
+         line-height: 5rem;
+         color: $sub;
+         margin-top: 2rem;
+     }
+
+     &_time {
+         font-size: 2.8rem;
+         color: $gray;
+         margin-top: 1rem;
+         font-weight: 800;
+     }
+ }
+
+ .panel {
+     display: flex;
+     flex-direction: column;
+     flex-grow: 1;
+
+     &_search {
+         display: flex;
+         align-items: center;
+         gap: 2.8rem;
+
+         img {
+             width: 3rem;
+             height: 3rem;
+             cursor: pointer;
+         }
+
+         input {
+             flex-grow: 1;
+             background-color: transparent;
+             border-width: 0;
+             font-size: 2.4rem;
+             line-height: 3.2rem;
+             padding-bottom: 0.8rem;
+             border-bottom: 3px solid #3B7FC0;
+             color: $white;
+         }
+     }
+
+     &_bookmark {
+         flex-grow: 1;
+
+         margin-top: 4rem;
+         overflow: auto;
+         border: 0.5rem solid $main;
+         border-radius: 1rem;
+         padding: 4rem 6rem;
+         display: grid;
+         column-gap: 10rem;
+         grid-template-columns: repeat(2, 1fr);
+
+         &-item {
+             font-size: 2rem;
+             position: relative;
+
+             &::before {
+                 content: '»';
+                 position: absolute;
+                 right: 110%;
+                 opacity: 0;
+                 transition: all ease .2s;
+             }
+
+             &:hover {
+                 color: $sub;
+
+                 &::before {
+                     right: 105%;
+                     opacity: 1;
+                 }
+             }
+         }
+     }
+
+ }
