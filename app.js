@@ -28,6 +28,7 @@ const onSubmit = (e) => {
 
     if (searchInput.value) {
         window.location.href = `https://www.google.com/search?q=${searchInput.value}`
+        searchInput.value = ''
     }
 }
 
