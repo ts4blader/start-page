@@ -5,94 +5,169 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
-    <script src="app.js" defer></script>
+    <script src="./app.js" defer></script>
     <title>Start Page</title>
 </head>
 
 <body>
 
-    <div class="hint">
-        <img src="./assets/sticker.svg" alt="hint">
-    </div>
-
     <div class="container">
+
         <div class="profile">
+            <div class="thumbnail">
+                <img src="./assets/nyan-cat.webp" alt="nyan-cat">
+            </div>
 
-            <img class="profile_avatar" src="./assets/boring-tom.jpg" alt="avatar">
+            <div class='info'>
 
+                <div class="info-field name">
+                    <label>🚀 Name</label>
+                    <p>Tristin Tran</p>
+                </div>
 
-            <div class="profile_name">Tristin Tran</div>
-            <div class="profile_time">--- % ---</div>
+                <div class="info-field browser">
+                    <label>🚄 Browser</label>
+                    <p id="browser">Firefox</p>
+                </div>
 
-        </div>
+                <div class="info-field os">
+                    <label>🛩 OS</label>
+                    <p id="OS">GNU/Linux</p>
+                </div>
 
-        <div class="panel">
-            <form class="panel_search">
-                <button type="submit">
-                    <img id="search-icon" src="./assets/search.svg" alt="search_icon">
-                </button>
-                <input id="search-input" type="text" placeholder="Search...">
-            </form>
+                <div class="info-field role">
+                    <label>🎮 Role</label>
+                    <p>Junior FE</p>
+                </div>
 
-            <div class="panel_bookmark">
+            </div>
 
-                <a href="https://pagespeed.web.dev/" class="panel_bookmark-item">
-                    Pagespeed insight
-                </a>
+            <div class="bottom-bar">
+                <div class='clock' id="clock">HH : MM AA</div>
 
-                <a href="https://omatsuri.app/" class="panel_bookmark-item">
-                    Omasuri
-                </a>
+                <div class="vr">--</div>
 
-                <a href="https://gitlab.3forcom.com/" class="panel_bookmark-item">
-                    Gitlab
-                </a>
-
-                <a href="https://github.com/" class="panel_bookmark-item">
-                    Github
-                </a>
-
-                <a href="https://bitbucket.org/" class="panel_bookmark-item">
-                    Bitbucket
-                </a>
-
-                <a href="https://slack.com/" class="panel_bookmark-item">
-                    Slack
-                </a>
-
-                <a href="https://hexcol.com/" class="panel_bookmark-item">
-                    Hexcol
-                </a>
-
-                <a href="https://jira.3forcom.com/" class="panel_bookmark-item">
-                    Jira
-                </a>
-
-                <a href="https://www.reddit.com/" class="panel_bookmark-item">
-                    Reddit
-                </a>
-
-                <a href="https://www.figma.com/" class="panel_bookmark-item">
-                    Figma
-                </a>
-
-                <a href="https://transform.tools" class="panel_bookmark-item">
-                    Transform tool
-                </a>
-
-                <a href="https://www.mockaroo.com/" class="panel_bookmark-item">
-                    Mockaroo
-                </a>
-
-                <a href="https://picsum.photos/" class="panel_bookmark-item">
-                    Picsum
-                </a>
+                <div class='social'>
+                    <a href="https://github.com/ts4blader">
+                        <img src="./assets/github.png" alt="github">
+                    </a>
+                    <a href="https://www.linkedin.com/in/ts4blader/">
+                        <img src="./assets/linkedin.png" alt="linkedin">
+                    </a>
+                    <a href="mailto:ts4blader@gmail.com">
+                        <img src="./assets/google.png" alt="google">
+                    </a>
+                </div>
             </div>
         </div>
 
+        <div class="terminal">
+
+            <div class="search-bar">
+                <label for='search'>
+                    <img class="arrow" src="./assets/backward-arrow.png" alt="arrow">
+                    <div class="terminal-username">tris</div>
+                    <div>@</div>
+                    <div class="terminal-browser" id="terminal-browser">firefox</div>
+                    <div>:</div>
+                </label>
+
+                <div class="input">
+                    <input type="text" id="search" autofocus>
+                    <p class="caret" id="search-str"></p>
+                </div>
+
+                <div class="hint" id="hint">Search with Google</div>
+            </div>
+
+            <div class="categories">
+                <div class='category source'>
+                    <h3>🥕 Source</h3>
+                    <ul class="list">
+                        <li><a href='https://github.com'>Github</a></li>
+                        <li><a href='https://about.gitlab.com'>Gitlab</a></li>
+                        <li><a href='https://bitbucket.org'>Bitbucket</a></li>
+                        <li><a href='https://stackoverflow.com'>Stackoverflow</a></li>
+                    </ul>
+                </div>
+
+                <div class='category social'>
+                    <h3>📢 Social</h3>
+                    <ul class="list">
+                        <li><a href='https://www.reddit.com'>Reddit</a></li>
+                        <li><a href='https://www.facebook.com'>Facebook</a></li>
+                        <li><a href='https://chat.zalo.me'>Zalo</a></li>
+                        <li><a href='https://web.telegram.org'>Telegram</a></li>
+                    </ul>
+                </div>
+
+                <div class='category animation'>
+                    <h3>🖌 Animation</h3>
+                    <ul class="list">
+                        <li><a href='https://easings.net'>Easing</a></li>
+                        <li><a href='https://rive.app'>Rive</a></li>
+                        <li><a href='https://animista.net'>Animista</a></li>
+                        <li><a href='https://waitanimate.wstone.uk'>WAIT! Animate</a></li>
+                    </ul>
+                </div>
+
+                <div class='category tools'>
+                    <h3>🔨 Tools</h3>
+                    <ul class="list">
+                        <li><a href='https://omatsuri.app/'>Omasuri</a></li>
+                        <li><a href='https://cssgrid-generator.netlify.app/'>Grid generator</a></li>
+                        <li><a href='https://regexr.com/'>RegTest</a></li>
+                        <li><a href='https://transform.tools/'>Transform tool</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="utilities">
+                <h3>🎉 Utilities</h3>
+
+                <div class="categories">
+                    <ul class="list">
+                        <li><a href='https://omatsuri.app/'>Meta Tags</a></li>
+                        <li><a href='https://cssgrid-generator.netlify.app/'>SEO Cheatsheet</a></li>
+                        <li><a href='https://regexr.com/'>QuickRef</a></li>
+                        <li><a href='https://transform.tools/'>Hackerrank</a></li>
+                    </ul>
+
+                    <ul class="list">
+                        <li><a href='https://favicon.io/'>Favicon</a></li>
+                        <li><a href='https://www.mockaroo.com/'>Mockaroo</a></li>
+                        <li><a href='https://picsum.photos/'>Picsum</a></li>
+                        <li><a href='https://pagespeed.web.dev/'>Lighthouse</a></li>
+                    </ul>
+
+                    <ul class="list">
+                        <li><a href='https://www.flaticon.com/'>Flaticon</a></li>
+                        <li><a href='https://flatuicolors.com/'>Flatcolor</a></li>
+                        <li><a href='https://tinypng.com/'>Tiny PNG</a></li>
+                        <li><a href='https://hexcol.com/'>Hexcol</a></li>
+                    </ul>
+
+                    <ul class="list">
+                        <li><a
+                                href='https://react-typescript-cheatsheet.netlify.app/docs/basic/setup'>R.T
+                                Cheatsheet</a></li>
+                        <li><a href='https://loading.io/'>Loading.io</a></li>
+                        <li><a href='https://farbenfroh.io/faerber'>Farbenfroh</a></li>
+                        <li><a href='https://transfonter.org/'>Fontface generator</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
     </div>
+
 </body>
 
 </html>
